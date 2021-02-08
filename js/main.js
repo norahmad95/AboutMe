@@ -7,7 +7,7 @@ console.log(userName);
 
 let me = prompt('Im I 26 years old ?', "<yes or no>");
 
-if (me.toLowerCase() === 'yes') {
+if (me.toLowerCase === 'yes') {
     alert('it\'s true');
     //console.log('correct')
 } else if (me.toLowerCase() === 'no') {
