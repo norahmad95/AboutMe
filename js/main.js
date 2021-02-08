@@ -53,4 +53,4 @@ if (know.toLowerCase() === 'yes') {
 }
 
 alert(userName + (' ..hello agin'))
-console.log(userName, know, ask, me, challenges)
+console.log(userName, know, ask, me, challenges, back)
