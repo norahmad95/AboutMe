@@ -72,7 +72,7 @@ while (flag) {
             flag = false;
             break;
 
-        } else if (Number(guess) > 8 && Number(guess) < 6) {
+        } else if (Number(guess) > 8 || Number(guess) < 6) {
             alert('too faaar');
             guess = prompt('please try again you have : ' + toTry + ' remaining!');
 
@@ -97,10 +97,9 @@ while (flag) {
 
 
 let toDo = ['walking at night', 'swimming', 'bike riding', 'camping', 'cooking', 'meditation', 'meet people', 'photography', 'exploration', 'writing'];
-//let attempts = 6;
+let attempts = 6;
 let userInput = prompt('try to guess what I like to do');
 let correct = false
-
 while (attempts > 0) {
 
     for (let i = 0; i < toDo.length; i++) {
