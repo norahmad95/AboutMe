@@ -62,14 +62,14 @@ let toTry = 4;
 let guess = prompt('guess what is my luck number?', "<number goes from 1 to 10>");
 
 
-theLoop: while (toTry > 0) {
+while (toTry > 0) {
     for (let i = 0; i < toTry.length; i++) {
 
         // console.log('at index', lucky[i]);
 
         if (guess[i] === 7) {
             alert('true');
-            break theLoop;
+            break;
 
 
         } else if (guess[i] > 8 && guess[i] < 6) {
@@ -80,7 +80,7 @@ theLoop: while (toTry > 0) {
             // console.log(guess);
 
         }
-        break theLoop;
+        break;
     }
     toTry--;
     guess = prompt('please try again you have : ' + toTry + ' remaining!');
