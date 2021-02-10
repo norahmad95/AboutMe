@@ -60,34 +60,34 @@ console.log(userName, know, ask, me, challenges, back);
 let lucky = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let toTry = 4;
 let guess = prompt('guess what is my luck number?', "<number goes from 1 to 10>");
+let flag = true
 
-
-while (toTry > 0) {
-    for (let i = 0; i < toTry.length; i++) {
+while (flag) {
+    for (let i = 0; i < lucky.length; i++) {
 
         // console.log('at index', lucky[i]);
 
-        if (guess[i] === 7) {
+        if (Number(guess) === 7) {
             alert('true');
+            flag = false;
             break;
 
-
-        } else if (guess[i] > 8 && guess[i] < 6) {
+        } else if (Number(guess) > 8 && Number(guess) < 6) {
             alert('too faaar');
+            guess = prompt('please try again you have : ' + toTry + ' remaining!');
 
-        } else if (guess[i] === 8 || guess[i] === 6) {
+        } else if (Number(guess) === 8 || Number(guess) ===
+            6) {
             alert('very very close');
-            // console.log(guess);
+            // console.log(Number(guess));
+            guess = prompt('please try again you have : ' + toTry + ' remaining!');
 
         }
         break;
     }
-    toTry--;
-    guess = prompt('please try again you have : ' + toTry + ' remaining!');
 
-    {
 
-    }
+
 
 }
 
@@ -97,24 +97,37 @@ while (toTry > 0) {
 
 
 let toDo = ['walking at night', 'swimming', 'bike riding', 'camping', 'cooking', 'meditation', 'meet people', 'photography', 'exploration', 'writing'];
-let attempts = 6;
+//let attempts = 6;
 let userInput = prompt('try to guess what I like to do');
-myLoop: while (attempts > 0) {
+let correct = false
+
+while (attempts > 0) {
 
     for (let i = 0; i < toDo.length; i++) {
         console.log('at index', i, 'value =>', userInput)
+        console.log(userInput)
+        console.log(toDo[i])
 
         if (userInput === toDo[i]) {
             alert('correct answer!');
-            break myLoop;
+            correct = true
+            break;
         }
 
-        userInput = prompt('please try again you have : ' + attempts + ' remaining!');
         attempts--;
-
     }
+    if (correct) {
+        break;
+    }
+    userInput = prompt('please try again you have : ' + attempts + ' remaining!');
+
     console.log(userInput);
+
+
+
 }
+
+
 
 
 // toDo.push('playing');
