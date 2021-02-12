@@ -7,7 +7,7 @@ console.log(userName);
 
 let me = prompt('Im I 26 years old ?', "<yes or no>");
 
-if (me.toLowerCase === 'yes') {
+if (me.toLowerCase() === 'yes') {
     alert('it\'s true');
     //console.log('correct')
 } else if (me.toLowerCase() === 'no') {
@@ -39,6 +39,7 @@ if (ask.toLowerCase() === 'yes') {
     alert('do not even try');
 } else if (ask.toLowerCase() === 'no') {
     alert('great I like you ');
+
     //console.log('correct')
 }
 
@@ -55,13 +56,13 @@ if (know.toLowerCase() === 'yes') {
 alert(userName + '..hello agin');
 
 console.log(userName, know, ask, me, challenges, back);
-0
+
 
 let lucky = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let toTry = 4;
 let guess = prompt('guess what is my luck number?', "<number goes from 1 to 10>");
-let flag = true
-
+let flag = true;
+let finalScore = 0;
 while (flag) {
     for (let i = 0; i < lucky.length; i++) {
 
@@ -83,15 +84,15 @@ while (flag) {
             guess = prompt('please try again you have : ' + toTry + ' remaining!');
 
         }
+
+        finalScore++;
         break;
     }
 
 
-
-
 }
 
-
+alert('its ..7')
 
 
 
@@ -113,20 +114,22 @@ while (attempts > 0) {
             break;
         }
 
-        attempts--;
+
     }
     if (correct) {
+        attempts--;
         break;
+
     }
     userInput = prompt('please try again you have : ' + attempts + ' remaining!');
 
     console.log(userInput);
-
+    finalScore++;
 
 
 }
 
-
+alert('your score..' + finalScore)
 
 
 // toDo.push('playing');
